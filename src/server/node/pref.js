@@ -16,7 +16,7 @@ app.use(express.json());
 
 const SUBDOMAIN = process.env.SUBDOMAIN || 'dev';
 
-const continuebeeURL = process.env.LOCALHOST ? 'http://localhost:2999' : `https://${SUBDOMAIN}.continuebee.allyabase.com/`;
+const continuebeeURL = process.env.LOCALHOST ? 'http://localhost:2999/' : `https://${SUBDOMAIN}.continuebee.allyabase.com/`;
 
 fount.baseURL = process.env.LOCALHOST ? 'http://localhost:3006/' : `${SUBDOMAIN}.fount.allyabase.com/`;
 bdo.baseURL = process.env.LOCALHOST ? 'http://localhost:3003/' : `${SUBDOMAIN}.bdo.allyabase.com/`;
