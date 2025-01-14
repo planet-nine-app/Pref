@@ -118,8 +118,8 @@ it('should get global preferences', async () => {
 
   const signature = await sessionless.sign(timestamp + uuid + hash);
 
-  const res = await get(`${baseURL}user/${uuid}/global/preferences?timestamp=${timestamp}&signature=${signature}`);
-console.log(res.body);
+  const res = await get(`${baseURL}user/${uuid}/global/preferences?timestamp=${timestamp}&signature=${signature}&hash=${hash}`);
+console.log('here is what these globals look like: ', res.body);
   res.body.preferences.baz.should.equal("updated");   
 });
 
